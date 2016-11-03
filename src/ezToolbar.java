@@ -17,7 +17,7 @@ public class ezToolbar extends Panel{
     {
         super();
         parent=p;
-        
+               
         this.setLayout(new FlowLayout());
         this.setBackground(Color.darkGray);
         

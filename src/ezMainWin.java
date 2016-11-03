@@ -71,7 +71,12 @@ public class ezMainWin extends Frame
     
     void setToolbar(ezToolbar tb)
     {
-        this.add(tb, BorderLayout.NORTH);
+        this.add(tb, BorderLayout.EAST);
+    }
+    
+    void setJToolBar(ezJToolBar jtb)
+    {
+        this.add(jtb, BorderLayout.NORTH);
     }
     
     ezMainWin(ezERD p)

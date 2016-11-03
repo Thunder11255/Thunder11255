@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 import java.util.Vector;
-import java.util.Vector;
+
 /**
  *
  * @author Thunder
@@ -18,6 +18,7 @@ public class ezERD
     Vector<ezPage> pages;
     ezPage activePage;
     ezToolbar toolbar;
+    ezJToolBar jtoolbar;
     ezMessageBar messagebar;
     
     int totalPages = 1;
@@ -28,10 +29,12 @@ public class ezERD
         pages = new Vector<ezPage>();
         mainWin = new ezMainWin(this);
         toolbar = new ezToolbar(this);
+        jtoolbar = new ezJToolBar(this);
         messagebar = new ezMessageBar(this);
         
-        mainWin.setToolbar(toolbar);
+        //mainWin.setToolbar(toolbar);
         mainWin.setMessageBar(messagebar);
+        mainWin.setJToolBar(jtoolbar);
         
         ezPage newPage = new ezPage();
         
