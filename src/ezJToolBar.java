@@ -15,19 +15,19 @@ import javax.swing.*;
 public class ezJToolBar extends JPanel implements ActionListener 
 {
     ezERD parent;
-    static final private String PREVIOUS = "previous";
-    static final private String UP = "up";
-    static final private String NEXT = "next";
-    
-    public ezJToolBar(ezERD p) {
+    static final private String NEWPAGE = "NewPage";
+    static final private String PREVPAGE = "PrevPage";
+    static final private String NEXTPAGE = "next";
         
+    public ezJToolBar(ezERD p) 
+    {
         //super(new BorderLayout());
         super();
         
         JToolBar toolBar = new JToolBar("Still draggable");
         addButtons(toolBar);
         
-        setPreferredSize(new Dimension(450, 130));
+        setPreferredSize(new Dimension(450, 40));
         add(toolBar, BorderLayout.PAGE_START);
         //add(scrollPane, BorderLayout.CENTER);
     }
@@ -35,11 +35,11 @@ public class ezJToolBar extends JPanel implements ActionListener
      public void addButtons(JToolBar toolBar)
      {
         JButton button = null;       //first button
-        button = makeNavigationButton(PREVIOUS, "Back to previous something-or-other","Previous");
+        button = makeNavigationButton(NEWPAGE, "Create a newpage","NewPage");
         toolBar.add(button);        //second button
-        button = makeNavigationButton(UP, "Up to something-or-other","Up");
+        button = makeNavigationButton(PREVPAGE, "Turn to PrevPage","PrevPage");
         toolBar.add(button);        //third button
-        button = makeNavigationButton(NEXT, "Forward to something-or-other","Next");
+        button = makeNavigationButton(NEXTPAGE, "Turn to NextPage","NextPage");
         toolBar.add(button);
     }
      
@@ -55,17 +55,17 @@ public class ezJToolBar extends JPanel implements ActionListener
         button.setToolTipText(toolTipText);
         button.addActionListener(this);
 
-                                             //no image found
+        //no image found
         button.setText(altText);
         return button;
     }
-    
-    public void actionPerformed(ActionEvent e) {
+     
+    public void actionPerformed (ActionEvent e){
         String cmd = e.getActionCommand();
         //String description = null;
 
         // Handle each button.
-        if (PREVIOUS.equals(cmd))  //first button clicked
+        if (NEWPAGE.equals(cmd))  //first button clicked
         {
             System.out.println("here 123");
             
@@ -77,11 +77,11 @@ public class ezJToolBar extends JPanel implements ActionListener
                 
             parent.messagebar.updateMessage();
         }
-        else if (UP.equals(cmd))  // second button clicked
+        else if (PREVPAGE.equals(cmd))  // second button clicked
         {
-
+            System.out.println("UP");
         }
-        else if (NEXT.equals(cmd))  // third button clicked
+        else if (NEXTPAGE.equals(cmd))  // third button clicked
         {
 
         }
