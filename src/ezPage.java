@@ -23,7 +23,7 @@ public class ezPage extends Panel
     Point lp, cp;
     Vector<ezDrawLine> drawLines;
     
-    ezPage()
+    public ezPage()
     {
         super();
         status = ezPageStatus.activated;

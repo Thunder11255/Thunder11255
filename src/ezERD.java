@@ -24,7 +24,7 @@ public class ezERD
     int totalPages = 1;
     int curPage = 0;
     
-    ezERD()
+    public ezERD()
     {
         pages = new Vector<ezPage>();
         mainWin = new ezMainWin(this);
