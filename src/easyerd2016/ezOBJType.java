@@ -3,18 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import java.awt.Point;
+package easyerd2016;
+
 /**
  *
  * @author Thunder
  */
-public class ezDrawLine 
+public enum ezOBJType 
 {
-    Point sp, ep;
-    
-    ezDrawLine(Point s, Point e)
-    {
-        sp = s;
-        ep = e;
-    }
+    ES, RS, AT;
 }

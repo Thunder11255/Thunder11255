@@ -1,3 +1,5 @@
+package easyerd2016;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -35,16 +37,16 @@ public class ezToolbar extends Panel{
         this.add(newPageBtn);
         newPageBtn.addMouseListener(new MouseAdapter()
         {
-            public void mouseClicked(MouseEvent e)
+            /*public void mouseClicked(MouseEvent e)
             {
-                ezPage newPage= new ezPage();
+                ezPage newPage= new ezPage(ezToolBar.this);
                 parent.mainWin.addPage(newPage);
                 
                 parent.totalPages++;
               //  parent.curPage++;
                 
                 parent.messagebar.updateMessage();
-            }
+            }*/
         });
 
         Button prevPageBtn = new Button("Prev Page");

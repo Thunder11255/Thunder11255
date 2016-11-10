@@ -1,3 +1,5 @@
+package easyerd2016;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -45,7 +47,7 @@ public class ezMainWin extends Frame
         parent.activePage=ep;
     }
     
-    void addPage(ezPage p)
+    public void addPage(ezPage p)
     {
         System.out.println("here 1");
         
@@ -69,14 +71,20 @@ public class ezMainWin extends Frame
         this.add(mb, BorderLayout.SOUTH);
     }
     
-    void setToolbar(ezToolbar tb)
+    /*void setToolbar(ezToolbar tb)
     {
         this.add(tb, BorderLayout.EAST);
-    }
+    }*/
     
     void setJToolBar(ezJToolBar jtb)
     {
         this.add(jtb, BorderLayout.NORTH);
+    }
+    
+    void chooseColor(ezColor cl)
+    {
+        //System.out.println("123");
+        this.add(cl, BorderLayout.EAST);
     }
     
     ezMainWin(ezERD p)
